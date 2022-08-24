@@ -1,0 +1,28 @@
+{
+  "name": "crosscapital",
+  "version": "1.0.0",
+  "description": "CrossCapital Company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-dev": "sass --watch --update --style=expanded styles/scss:assets/css",
+    "sass-prod": "sass --no-source-map --style=compressed styles/scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiasmd8610/CrossCapital.git"
+  },
+  "author": "Matias Di Iorio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiasmd8610/CrossCapital/issues"
+  },
+  "homepage": "https://github.com/matiasmd8610/CrossCapital#readme",
+  "devDependencies": {
+    "sass": "^1.54.5"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "bootstrap": "^5.1.3"
+  }
+}
