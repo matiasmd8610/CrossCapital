@@ -32,9 +32,10 @@ main {
 }
 
 h1, h2, h3, h4 {
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
     color: $color-blue-main;
+    font-family: 'Source Sans Pro';
 }
 
 h1, h2 {
@@ -44,17 +45,15 @@ h1, h2 {
 
 h1 {
     font-size: 2.35rem;
-    color: #3271d9;
     text-align: center;
     position: relative;
     @include media-breakpoint-up(lg) {
-        font-size: 2.75rem;
+        font-size: 3rem;
     }
 }
 
 h2 {
     font-size: 2rem;
-    color: $color-main;
     text-align: center;
     @include media-breakpoint-up(lg) {
         font-size: 2.5rem;
@@ -67,6 +66,10 @@ section {
 
 p {
     margin-bottom: .5rem;
+}
+
+figure {
+    margin: 0;
 }
 
 .btn {
@@ -99,9 +102,67 @@ p {
 }
 
 a {
-    color: $color-main;
+    color: $color-blue-main;
     &:hover {
-        color: #037c2d;
+        color: $color-blue-secondary;
+    }
+}
+
+.hero {
+    padding: 2rem;
+    margin-top: 5rem;
+    position: relative;
+    
+    &:after {
+        width: 100%;
+        content: '';
+        display: block;
+        height: 70%;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background-color: $color-blue-main;
+        z-index: -1;
+    }
+
+    &-text {
+        padding: 2rem;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        min-height: 300px;
+        align-items: flex-start;
+    }
+
+    &-image {
+        height: 400px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+}
+
+#scroll-indicator {
+    background-color: transparent;
+    height: 5px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    @include media-breakpoint-down(md) {
+        background-color: rgba($color: #000, $alpha: 0.8) !important;
+    }
+    span {
+        display: block;
+        background-color: $color-blue-third;
+        height: 100%;
+        width: 0;
+        transition: all 0.2s ease;
     }
 }
 

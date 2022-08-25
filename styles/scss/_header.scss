@@ -8,8 +8,72 @@ header {
     margin-right: auto;
     transition: all 0.35s ease;
 
+    &.sticky {
+        box-shadow: 0px 0px 10px #222;
+        background: rgba(21, 63, 89, 0.75);
+        position: fixed;
+        z-index: 999;
+        //top: 5px;
+
+        .navbar-brand {
+            /* img {
+                width: 150px;
+            } */
+        }
+    }
+
     .navbar {
-        padding: 1.5rem 0;
+        padding: .85rem 0;
+        .navbar-toggler {
+            min-height: 40px;
+            &:focus {
+                box-shadow: 0 0 0 0.1rem rgb(255 255 255 / 30%);
+            }
+            &[aria-expanded=true] {
+                .navbar-toggler-icon {
+                    span {
+                        margin: 0;
+                        &:first-child {
+                            transform: rotate(45deg);
+                        }
+
+                        &:last-child {
+                            transform: rotate(-45deg);
+                            margin-top: -1px;
+                        }
+                        
+                    }
+                }
+            }
+            &-icon {
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                background-image: none;
+                span {
+                    display: block;
+                    width: 26px;
+                    height: 2px;
+                    background-color: #fff;
+                    margin-bottom: 8px;
+                    transition: all 0.25s ease-in-out;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .navbar-brand {
+            img {
+                transition: all 0.5s ease;
+                @include media-breakpoint-down(md) {
+                    width: 140px;
+                }
+            }
+        }
+
         .navbar-collapse {
             justify-content: flex-end;
             .navbar-nav {
@@ -23,6 +87,10 @@ header {
                         padding: 0.15rem .7rem;
                         text-transform: uppercase;
                         font-size: 0.7rem;
+                        transition: all 0.4s ease-in-out;
+                        &:hover {
+                            color: $color-blue-third;
+                        }
                     }
                 }
             }
@@ -30,8 +98,11 @@ header {
                 display: flex;
                 list-style: none;
                 background-color: #fff;
-                padding: 0.25rem;
-                margin: 0 0 0 1rem;
+                padding: 0.1rem 0.25rem;
+                position: absolute;
+                right: 0;
+                top: 30px;
+
                 li {
                     position: relative;
                     &.active {

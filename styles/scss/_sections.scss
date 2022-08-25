@@ -27,9 +27,14 @@
             .container {
                 position: relative;
                 z-index: 3;
-                padding-top: 8rem;
+                padding-top: 5rem;
+                @include media-breakpoint-up(lg) {
+                    padding-top: 8rem;
+                }
                 .text {
-                    max-width: 60%;
+                    @include media-breakpoint-up(lg) {
+                        max-width: 60%;
+                    }
                     h3 {
                         color: $color-blue-third;
                     }

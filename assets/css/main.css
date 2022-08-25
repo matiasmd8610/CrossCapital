@@ -11536,9 +11536,10 @@ main {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.1;
   color: #000a23;
+  font-family: "Source Sans Pro";
 }
 
 h1, .h1, h2, .h2 {
@@ -11548,19 +11549,17 @@ h1, .h1, h2, .h2 {
 
 h1, .h1 {
   font-size: 2.35rem;
-  color: #3271d9;
   text-align: center;
   position: relative;
 }
 @media (min-width: 992px) {
   h1, .h1 {
-    font-size: 2.75rem;
+    font-size: 3rem;
   }
 }
 
 h2, .h2 {
   font-size: 2rem;
-  color: #444;
   text-align: center;
 }
 @media (min-width: 992px) {
@@ -11575,6 +11574,10 @@ section {
 
 p {
   margin-bottom: 0.5rem;
+}
+
+figure {
+  margin: 0;
 }
 
 .btn {
@@ -11605,10 +11608,67 @@ p {
 }
 
 a {
-  color: #444;
+  color: #000a23;
 }
 a:hover {
-  color: #037c2d;
+  color: #153f59;
+}
+
+.hero {
+  padding: 2rem;
+  margin-top: 5rem;
+  position: relative;
+}
+.hero:after {
+  width: 100%;
+  content: "";
+  display: block;
+  height: 70%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: #000a23;
+  z-index: -1;
+}
+.hero-text {
+  padding: 2rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  min-height: 300px;
+  align-items: flex-start;
+}
+.hero-image {
+  height: 400px;
+}
+.hero-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+#scroll-indicator {
+  background-color: transparent;
+  height: 5px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+@media (max-width: 767.98px) {
+  #scroll-indicator {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+}
+#scroll-indicator span {
+  display: block;
+  background-color: #94b8d7;
+  height: 100%;
+  width: 0;
+  transition: all 0.2s ease;
 }
 
 header {
@@ -11621,8 +11681,61 @@ header {
   margin-right: auto;
   transition: all 0.35s ease;
 }
+header.sticky {
+  box-shadow: 0px 0px 10px #222;
+  background: rgba(21, 63, 89, 0.75);
+  position: fixed;
+  z-index: 999;
+}
+header.sticky .navbar-brand {
+  /* img {
+      width: 150px;
+  } */
+}
 header .navbar {
-  padding: 1.5rem 0;
+  padding: 0.85rem 0;
+}
+header .navbar .navbar-toggler {
+  min-height: 40px;
+}
+header .navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.3);
+}
+header .navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon span {
+  margin: 0;
+}
+header .navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon span:first-child {
+  transform: rotate(45deg);
+}
+header .navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon span:last-child {
+  transform: rotate(-45deg);
+  margin-top: -1px;
+}
+header .navbar .navbar-toggler-icon {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-image: none;
+}
+header .navbar .navbar-toggler-icon span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 8px;
+  transition: all 0.25s ease-in-out;
+}
+header .navbar .navbar-toggler-icon span:last-child {
+  margin-bottom: 0;
+}
+header .navbar .navbar-brand img {
+  transition: all 0.5s ease;
+}
+@media (max-width: 767.98px) {
+  header .navbar .navbar-brand img {
+    width: 140px;
+  }
 }
 header .navbar .navbar-collapse {
   justify-content: flex-end;
@@ -11638,13 +11751,19 @@ header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
   padding: 0.15rem 0.7rem;
   text-transform: uppercase;
   font-size: 0.7rem;
+  transition: all 0.4s ease-in-out;
+}
+header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: #94b8d7;
 }
 header .navbar .navbar-collapse .language-selector {
   display: flex;
   list-style: none;
   background-color: #fff;
-  padding: 0.25rem;
-  margin: 0 0 0 1rem;
+  padding: 0.1rem 0.25rem;
+  position: absolute;
+  right: 0;
+  top: 30px;
 }
 header .navbar .navbar-collapse .language-selector li {
   position: relative;
@@ -11699,10 +11818,17 @@ header .navbar .navbar-collapse .language-selector li a {
 .main-slider .home-swiper .swiper-slide .container {
   position: relative;
   z-index: 3;
-  padding-top: 8rem;
+  padding-top: 5rem;
 }
-.main-slider .home-swiper .swiper-slide .container .text {
-  max-width: 60%;
+@media (min-width: 992px) {
+  .main-slider .home-swiper .swiper-slide .container {
+    padding-top: 8rem;
+  }
+}
+@media (min-width: 992px) {
+  .main-slider .home-swiper .swiper-slide .container .text {
+    max-width: 60%;
+  }
 }
 .main-slider .home-swiper .swiper-slide .container .text h3, .main-slider .home-swiper .swiper-slide .container .text .h3 {
   color: #94b8d7;
