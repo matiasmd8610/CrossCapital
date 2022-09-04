@@ -14,11 +14,43 @@ header {
         position: fixed;
         z-index: 999;
         //top: 5px;
+    }
 
-        .navbar-brand {
-            /* img {
-                width: 150px;
-            } */
+    &.header-home {
+        .navbar {
+            .navbar-brand {
+                .logo-blue {
+                    display: none;
+                }
+                .logo-white {
+                    display: block;
+                }
+            }
+            .navbar-collapse {
+                justify-content: flex-end;
+                .navbar-nav {
+                    .nav-item {
+                        border-right: 1px solid #fff;
+                        .nav-link {
+                            color: #fff;
+                        }
+                    }
+                }
+                .language-selector {
+                    background-color: #fff;
+                    color: $color-blue-main;
+                    li {
+                        a {
+                            color: $color-main;
+                        }
+                        &:first-child {
+                            &:after {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -67,6 +99,12 @@ header {
 
         .navbar-brand {
             img {
+                &.logo-blue {
+                    display: block;
+                }
+                &.logo-white {
+                    display: none;
+                }
                 transition: all 0.5s ease;
                 @include media-breakpoint-down(md) {
                     width: 140px;
@@ -78,12 +116,11 @@ header {
             justify-content: flex-end;
             .navbar-nav {
                 .nav-item {
-                    border-right: 1px solid #fff;
+                    border-right: 1px solid $color-main;
                     &:last-child {
                         border: 0;
                     }
                     .nav-link {
-                        color: #fff;
                         padding: 0.15rem .7rem;
                         text-transform: uppercase;
                         font-size: 0.7rem;
@@ -97,7 +134,8 @@ header {
             .language-selector {
                 display: flex;
                 list-style: none;
-                background-color: #fff;
+                background-color: $color-blue-main;
+                color: #fff;
                 padding: 0.1rem 0.25rem;
                 position: absolute;
                 right: 0;
@@ -124,10 +162,10 @@ header {
                         }
                     }
                     a {
-                        color: $color-main;
                         text-decoration: none;
                         font-size: 0.75rem;
                         padding: 0.2rem;
+                        color: #fff;
                     }
                 }
             }

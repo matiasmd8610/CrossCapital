@@ -36,16 +36,16 @@ h1, h2, h3, h4 {
     line-height: 1.1;
     color: $color-blue-main;
     font-family: 'Source Sans Pro';
+    text-align: left;
 }
 
 h1, h2 {
     position: relative;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.1rem;
 }
 
 h1 {
     font-size: 2.35rem;
-    text-align: center;
     position: relative;
     @include media-breakpoint-up(lg) {
         font-size: 3rem;
@@ -54,14 +54,13 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    text-align: center;
     @include media-breakpoint-up(lg) {
         font-size: 2.5rem;
     }
 }
 
 section {
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
 
 p {
@@ -76,7 +75,7 @@ figure {
     border-radius: 0;
     text-transform: uppercase;
     border: 0;
-    padding: 0.3rem 1.5rem;
+    padding: 0.35rem 1.5rem;
     font-weight: 400;
     min-width: 120px;
     font-size: 0.85rem;
@@ -92,11 +91,21 @@ figure {
 
     &-secondary {
         background-color: transparent;
-        border: 3px solid #fff;
+        border: 2px solid #fff;
         &:hover {
             background-color: #fff;
             color: $color-blue-main;
             border-color: #fff;
+        }
+    }
+
+    &-third {
+        background-color: transparent;
+        border: 2px solid $color-blue-main;
+        &:hover {
+            background-color: $color-blue-main;
+            color: #fff;
+            border-color: $color-blue-main;
         }
     }
 }
@@ -163,6 +172,24 @@ a {
         height: 100%;
         width: 0;
         transition: all 0.2s ease;
+    }
+}
+
+.two-cols {
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-start;
+        .btn {
+            margin-top: auto;
+        }
+    }
+}
+
+.intro {
+    p {
+        font-size: 1.35rem;
     }
 }
 

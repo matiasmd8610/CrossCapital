@@ -65,3 +65,28 @@
         }
     }
 }
+
+//BANNER VIDEO
+.banner-video {
+    position: relative;
+    padding: .75rem 0 .5rem;
+    &:after {
+        background-color: $color-blue-main;
+        position: absolute;
+        content: '';
+        width: 70%;
+        right: 0;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        @include media-breakpoint-up(lg) {
+            margin-left: .85rem;
+        }
+    }
+}
