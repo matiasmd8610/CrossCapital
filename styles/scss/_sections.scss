@@ -90,3 +90,17 @@
         }
     }
 }
+
+.our-companies {
+    .companies-swiper {
+        .swiper-slide {
+            img {
+                max-width: 100%;
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            z-index: 100;
+        }
+    }
+}
