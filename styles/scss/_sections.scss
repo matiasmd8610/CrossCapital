@@ -2,7 +2,8 @@
 .main-slider {
     .home-swiper {
         .swiper-slide {
-            height: 580px;
+            height: 550px;
+
             &:after {
                 content: '';
                 display: block;
@@ -14,6 +15,7 @@
                 left: 0;
                 top: 0;
             }
+
             img {
                 object-fit: cover;
                 object-position: center center;
@@ -91,6 +93,7 @@
     }
 }
 
+//OUR COMPANIES
 .our-companies {
     .companies-swiper {
         .swiper-slide {
@@ -102,5 +105,46 @@
         .swiper-button-next {
             z-index: 100;
         }
+    }
+}
+
+//INVESTMENT CRITERIA
+.investment-criteria {
+    background: rgb(85,121,150);
+    background: linear-gradient(360deg, rgba(85,121,150,1) 25%, rgba(148,184,215,1) 100%);
+
+    &-items-wrapper {
+        display: grid;
+        grid-gap: 30px;
+        margin-top: 2rem;
+        margin-bottom: -5rem;
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        div {
+            border: 3px solid $color-blue-third;
+            border-radius: 10px;
+            background-color: #fff;
+            //box-shadow: 0 0 5px #eee;
+            padding: 1rem;
+        }
+    }
+}
+
+//FUTURE INVESTMENT
+.future-ivestment {
+    margin-top: 4rem;
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+//KNOW MORE
+.know-more {
+    background-color: $color-blue-secondary;
+    p, 
+    h3 {
+        color: #fff;
     }
 }

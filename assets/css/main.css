@@ -11531,7 +11531,7 @@ html {
 body {
   font-family: "Avenir", sans-serif;
   line-height: 1.3;
-  color: #444;
+  color: #333;
 }
 
 .container {
@@ -11577,6 +11577,7 @@ h2, .h2 {
 }
 
 section {
+  margin: 2rem 0;
   padding: 2rem 0;
 }
 
@@ -11598,6 +11599,7 @@ figure {
   font-size: 0.85rem;
   transition: all 0.3s ease-in;
   letter-spacing: 0.02em;
+  margin-top: 1rem;
 }
 .btn-primary {
   background-color: #153f59;
@@ -11698,7 +11700,7 @@ a:hover {
   margin-top: auto;
 }
 
-.intro p {
+.intro {
   font-size: 1.35rem;
 }
 
@@ -11741,7 +11743,7 @@ header.header-home .navbar .navbar-collapse .language-selector {
   color: #000a23;
 }
 header.header-home .navbar .navbar-collapse .language-selector li a {
-  color: #444;
+  color: #333;
 }
 header.header-home .navbar .navbar-collapse .language-selector li:first-child:after {
   background-color: #000a23;
@@ -11801,7 +11803,7 @@ header .navbar .navbar-collapse {
   justify-content: flex-end;
 }
 header .navbar .navbar-collapse .navbar-nav .nav-item {
-  border-right: 1px solid #444;
+  border-right: 1px solid #333;
 }
 header .navbar .navbar-collapse .navbar-nav .nav-item:last-child {
   border: 0;
@@ -11852,7 +11854,7 @@ header .navbar .navbar-collapse .language-selector li a {
 }
 
 .main-slider .home-swiper .swiper-slide {
-  height: 580px;
+  height: 550px;
 }
 .main-slider .home-swiper .swiper-slide:after {
   content: "";
@@ -11948,6 +11950,44 @@ header .navbar .navbar-collapse .language-selector li a {
 .our-companies .companies-swiper .swiper-button-prev,
 .our-companies .companies-swiper .swiper-button-next {
   z-index: 100;
+}
+
+.investment-criteria {
+  background: rgb(85, 121, 150);
+  background: linear-gradient(360deg, rgb(85, 121, 150) 25%, rgb(148, 184, 215) 100%);
+}
+.investment-criteria-items-wrapper {
+  display: grid;
+  grid-gap: 30px;
+  margin-top: 2rem;
+  margin-bottom: -5rem;
+}
+@media (min-width: 992px) {
+  .investment-criteria-items-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.investment-criteria-items-wrapper div {
+  border: 3px solid #94b8d7;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.future-ivestment {
+  margin-top: 4rem;
+}
+.future-ivestment h2, .future-ivestment .h2 {
+  margin-bottom: 2rem;
+}
+
+.know-more {
+  background-color: #153f59;
+}
+.know-more p,
+.know-more h3,
+.know-more .h3 {
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
