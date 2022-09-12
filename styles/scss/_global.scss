@@ -54,7 +54,7 @@ h1, h2, h3, h4 {
 
 h1, h2 {
     position: relative;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
@@ -73,7 +73,7 @@ h2 {
 }
 
 section {
-    margin: 2rem 0;
+    margin: 3rem 0 0;
     padding: 2rem 0;
 }
 
@@ -179,7 +179,8 @@ a {
     width: 100%;
     z-index: 9999;
     @include media-breakpoint-down(md) {
-        background-color: rgba($color: #000, $alpha: 0.8) !important;
+        //background-color: rgba($color: #000, $alpha: 0.8) !important;
+        background-color: $color-blue-secondary;
     }
     span {
         display: block;

@@ -11554,7 +11554,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 h1, .h1, h2, .h2 {
   position: relative;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 h1, .h1 {
@@ -11577,7 +11577,7 @@ h2, .h2 {
 }
 
 section {
-  margin: 2rem 0;
+  margin: 3rem 0 0;
   padding: 2rem 0;
 }
 
@@ -11679,7 +11679,7 @@ a:hover {
 }
 @media (max-width: 767.98px) {
   #scroll-indicator {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-color: #153f59;
   }
 }
 #scroll-indicator span {
@@ -11732,11 +11732,36 @@ header.header-home .navbar .navbar-brand .logo-white {
 header.header-home .navbar .navbar-collapse {
   justify-content: flex-end;
 }
+@media (max-width: 991.98px) {
+  header.header-home .navbar .navbar-collapse {
+    background-color: #000a23;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  header.header-home .navbar .navbar-collapse .navbar-nav {
+    padding: 1.25rem 0;
+  }
+}
 header.header-home .navbar .navbar-collapse .navbar-nav .nav-item {
   border-right: 1px solid #fff;
 }
+@media (max-width: 991.98px) {
+  header.header-home .navbar .navbar-collapse .navbar-nav .nav-item {
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+}
 header.header-home .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
   color: #fff;
+}
+@media (max-width: 991.98px) {
+  header.header-home .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+    font-size: 1rem;
+  }
 }
 header.header-home .navbar .navbar-collapse .language-selector {
   background-color: #fff;
@@ -11750,6 +11775,11 @@ header.header-home .navbar .navbar-collapse .language-selector li:first-child:af
 }
 header .navbar {
   padding: 0.85rem 0;
+}
+@media (max-width: 991.98px) {
+  header .navbar {
+    background-color: #153f59;
+  }
 }
 header .navbar .navbar-toggler {
   min-height: 40px;
@@ -11796,7 +11826,7 @@ header .navbar .navbar-brand img.logo-white {
 }
 @media (max-width: 767.98px) {
   header .navbar .navbar-brand img {
-    width: 140px;
+    width: 180px;
   }
 }
 header .navbar .navbar-collapse {
@@ -11818,7 +11848,7 @@ header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
   color: #94b8d7;
 }
 header .navbar .navbar-collapse .language-selector {
-  display: flex;
+  display: none;
   list-style: none;
   background-color: #000a23;
   color: #fff;
@@ -11826,6 +11856,11 @@ header .navbar .navbar-collapse .language-selector {
   position: absolute;
   right: 0;
   top: 30px;
+}
+@media (min-width: 992px) {
+  header .navbar .navbar-collapse .language-selector {
+    display: flex;
+  }
 }
 header .navbar .navbar-collapse .language-selector li {
   position: relative;
@@ -11889,7 +11924,7 @@ header .navbar .navbar-collapse .language-selector li a {
 }
 @media (min-width: 992px) {
   .main-slider .home-swiper .swiper-slide .container .text {
-    max-width: 60%;
+    max-width: 50%;
   }
 }
 .main-slider .home-swiper .swiper-slide .container .text h3, .main-slider .home-swiper .swiper-slide .container .text .h3 {
@@ -11944,17 +11979,19 @@ header .navbar .navbar-collapse .language-selector li a {
   }
 }
 
+.our-companies .companies-swiper .swiper-wrapper {
+  padding-bottom: 2rem;
+}
 .our-companies .companies-swiper .swiper-slide img {
   max-width: 100%;
 }
-.our-companies .companies-swiper .swiper-button-prev,
-.our-companies .companies-swiper .swiper-button-next {
-  z-index: 100;
+.our-companies .companies-swiper .swiper-pagination {
+  bottom: 0;
 }
 
 .investment-criteria {
   background: rgb(85, 121, 150);
-  background: linear-gradient(360deg, rgb(85, 121, 150) 25%, rgb(148, 184, 215) 100%);
+  background: linear-gradient(360deg, #94b8d7 45%, #d3e2ef 100%);
 }
 .investment-criteria-items-wrapper {
   display: grid;
@@ -11971,7 +12008,7 @@ header .navbar .navbar-collapse .language-selector li a {
   border: 3px solid #94b8d7;
   border-radius: 10px;
   background-color: #fff;
-  padding: 1rem;
+  padding: 1.5rem 1.25rem;
 }
 
 .future-ivestment {
@@ -11988,6 +12025,55 @@ header .navbar .navbar-collapse .language-selector li a {
 .know-more h3,
 .know-more .h3 {
   color: #fff;
+}
+
+.two-cols-text--wrapper {
+  margin-top: 2rem;
+  columns: 2;
+  text-align: justify;
+  column-gap: 50px;
+}
+
+.strategic-sectors {
+  background-image: url("../../assets/images/impact_investment_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  position: relative;
+  min-height: 300px;
+}
+.strategic-sectors:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 76, 143, 0.7);
+  z-index: 1;
+}
+.strategic-sectors .text-content {
+  width: 50%;
+  position: relative;
+  z-index: 3;
+}
+.strategic-sectors .text-content h2, .strategic-sectors .text-content .h2 {
+  color: #f5f5dc;
+}
+.strategic-sectors .text-content ul {
+  padding-left: 1rem;
+  list-style: square;
+}
+
+.impact-investments {
+  background-color: #94b8d7;
+}
+.impact-investments .text-content {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-bottom: -2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

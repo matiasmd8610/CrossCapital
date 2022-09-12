@@ -35,7 +35,7 @@
                 }
                 .text {
                     @include media-breakpoint-up(lg) {
-                        max-width: 60%;
+                        max-width: 50%;
                     }
                     h3 {
                         color: $color-blue-third;
@@ -96,14 +96,16 @@
 //OUR COMPANIES
 .our-companies {
     .companies-swiper {
+        .swiper-wrapper {
+            padding-bottom: 2rem;
+        }
         .swiper-slide {
             img {
                 max-width: 100%;
             }
         }
-        .swiper-button-prev,
-        .swiper-button-next {
-            z-index: 100;
+        .swiper-pagination {
+            bottom: 0;
         }
     }
 }
@@ -111,7 +113,7 @@
 //INVESTMENT CRITERIA
 .investment-criteria {
     background: rgb(85,121,150);
-    background: linear-gradient(360deg, rgba(85,121,150,1) 25%, rgba(148,184,215,1) 100%);
+    background: linear-gradient(360deg, #94b8d7 45%, #d3e2ef 100%);
 
     &-items-wrapper {
         display: grid;
@@ -127,7 +129,7 @@
             border-radius: 10px;
             background-color: #fff;
             //box-shadow: 0 0 5px #eee;
-            padding: 1rem;
+            padding: 1.5rem 1.25rem;
         }
     }
 }
@@ -146,5 +148,60 @@
     p, 
     h3 {
         color: #fff;
+    }
+}
+
+//TWO COLS TEXT
+.two-cols-text {
+    &--wrapper {
+        margin-top: 2rem;
+        columns: 2;
+        text-align: justify;
+        column-gap: 50px;
+    }
+}
+
+//STRATEGIC SECTORS
+.strategic-sectors {
+    background-image: url('../../assets/images/impact_investment_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    position: relative;
+    min-height: 300px;
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 50%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 76, 143, 0.7);
+        z-index: 1;
+    }
+
+    .text-content {
+        width: 50%;
+        position: relative;
+        z-index: 3;
+        h2 {
+            color: #f5f5dc;
+        }
+        ul {
+            padding-left: 1rem;
+            list-style: square;
+        }
+    }
+}
+
+//IMPACT INVESTMENTS 
+.impact-investments {
+    background-color: $color-blue-third;
+    .text-content {
+        background-color: #fff;
+        padding: 1.5rem;
+        margin-bottom: -2rem;
     }
 }

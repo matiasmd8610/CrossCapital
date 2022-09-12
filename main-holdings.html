@@ -77,7 +77,7 @@
                 <div class="row">
                     <div class="col-lg-6 d-flex">
                         <div class="hero-text">
-                            <h1>Main Holdings</h1>
+                            <h1>Principales activos</h1>
                             <p>Gestionamos con eficiencia y responsabilidad cada una de las compañías que lideramos.</p>
                         </div>
                     </div>
@@ -90,20 +90,45 @@
             </div>
         </section>
 
-        <section class="our-companies">
+        <section class="impact-investments">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h2>Nuestras Empresas</h2>
+                        <h2>Inversiones con impacto</h2>
                     </div>
                     <div class="col-lg-6">
-                        <p>Las compañías en las que invertimos se destacan en sus respectivas industrias por su solidez, innovación y potencial de crecimiento a largo plazo:</p>
+                        <div class="text-content">
+                            <p>Nos involucramos profundamente en nuestras inversiones, aplicando nuestra experiencia y conocimiento a lo largo del ciclo económico de cada una de nuestras empresas.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <section class="strategic-sectors">
+            <div class="container">
+                <div class="text-content">
+                    <h2>Sectores estratégicos</h2>
+                    <ul>
+                        <li>Finanzas</li>
+                        <li>Real Estate</li>
+                        <li>Energía</li>
+                        <li>Agronegocios</li>
+                    </ul>
+                    <p>Participamos en sectores estratégicos con visión a largo plazo, enfocados en aportar crecimiento sustentable que beneficie a toda la sociedad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-companies pt-0">
+            <div class="container">
+                <div class="row">
+                    <h2>Nuestras Empresas</h2>
+                    <p>Las compañías en las que invertimos se destacan en sus respectivas industrias por su solidez, innovación y potencial de crecimiento a largo plazo:</p>
+                </div>
 
                 <!-- Swiper -->
-                <div class="swiper companies-swiper mt-5">
+                <div class="swiper companies-swiper mt-4">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="./assets/images/logo_main.png" alt="">
@@ -124,8 +149,8 @@
                             <img src="./assets/images/logo_main.png" alt="">
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+<!--                     <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
                     <div class="swiper-pagination"></div>
                 </div>
 
@@ -158,8 +183,11 @@
                 clickable: false,
             },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 1000,
             },
             breakpoints: {
                 640: {
