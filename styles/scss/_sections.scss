@@ -205,3 +205,43 @@
         margin-bottom: -2rem;
     }
 }
+
+//OUR EXPERTS
+.our-experts {
+    .experts-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        margin-top: 2rem;
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .expert-card {
+            border-radius: 10px;
+            box-shadow: 0 0 12px #ddd;
+            overflow: hidden;
+            figure {
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+
+            &--body {
+                padding: .75rem;
+
+            }
+
+            &--name {
+                font-size: 1.25rem;
+                margin-bottom: .25rem;
+                font-weight: 700;
+            }
+
+        }
+    }
+
+}
