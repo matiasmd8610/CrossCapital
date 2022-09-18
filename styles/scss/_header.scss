@@ -31,28 +31,12 @@ header {
             }
             .navbar-collapse {
                 justify-content: flex-end;
-                @include media-breakpoint-down(lg) {
-                    background-color: $color-blue-main;
-                    position: absolute;
-                    left: 0;
-                    top: 70px;
-                    width: 100%;
-                }
+
                 .navbar-nav {
-                    @include media-breakpoint-down(lg) {
-                        padding: 1.25rem 0;
-                    }
                     .nav-item {
                         border-right: 1px solid #fff;
-                        @include media-breakpoint-down(lg) {
-                            margin-bottom: .75rem;
-                            text-align: center;
-                        }
                         .nav-link {
                             color: #fff;
-                            @include media-breakpoint-down(lg) {
-                                font-size: 1rem;
-                            }
                         }
                     }
                 }
@@ -81,6 +65,8 @@ header {
         }
         .navbar-toggler {
             min-height: 40px;
+            padding: 8px 6px;
+            border-radius: 2px;
             &:focus {
                 box-shadow: 0 0 0 0.1rem rgb(255 255 255 / 30%);
             }
@@ -124,9 +110,15 @@ header {
             img {
                 &.logo-blue {
                     display: block;
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
                 }
                 &.logo-white {
                     display: none;
+                    @include media-breakpoint-down(md) {
+                        display: block;
+                    }
                 }
                 transition: all 0.5s ease;
                 @include media-breakpoint-down(md) {
@@ -137,9 +129,23 @@ header {
 
         .navbar-collapse {
             justify-content: flex-end;
+            @include media-breakpoint-down(lg) {
+                background-color: $color-blue-main;
+                position: absolute;
+                left: 0;
+                top: 70px;
+                width: 100%;
+            }
             .navbar-nav {
+                @include media-breakpoint-down(lg) {
+                    padding: 1.25rem 0;
+                }
                 .nav-item {
                     border-right: 1px solid $color-main;
+                    @include media-breakpoint-down(lg) {
+                        margin-bottom: .75rem;
+                        text-align: center;
+                    }
                     &:last-child {
                         border: 0;
                     }
@@ -148,6 +154,10 @@ header {
                         text-transform: uppercase;
                         font-size: 0.7rem;
                         transition: all 0.4s ease-in-out;
+                        @include media-breakpoint-down(lg) {
+                            font-size: 1rem;
+                            color: #fff;
+                        }
                         &:hover {
                             color: $color-blue-third;
                         }
@@ -155,7 +165,7 @@ header {
                 }
             }
             .language-selector {
-                display: none;
+                display: flex;
                 list-style: none;
                 background-color: $color-blue-main;
                 color: #fff;
@@ -163,12 +173,20 @@ header {
                 position: absolute;
                 right: 0;
                 top: 30px;
-                @include media-breakpoint-up(lg) {
-                    display: flex;
+                @include media-breakpoint-down(lg) {
+                    position: relative;
+                    background-color: transparent !important;
+                    top: initial;
+                    justify-content: center;
                 }
 
                 li {
                     position: relative;
+                    a {
+                        @include media-breakpoint-down(lg) {
+                            color: #fff !important;
+                        }
+                    }
                     &.active {
                         a {
                             font-weight: 700;
@@ -185,6 +203,9 @@ header {
                             position: absolute;
                             right: -6px;
                             top: 3px;
+                            @include media-breakpoint-down(lg) {
+                                background-color: #fff !important;
+                            }
                         }
                     }
                     a {

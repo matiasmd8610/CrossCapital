@@ -2,7 +2,10 @@
 .main-slider {
     .home-swiper {
         .swiper-slide {
-            height: 550px;
+            height: 480px;
+            @include media-breakpoint-up(lg) {
+                height: 550px;
+            }
 
             &:after {
                 content: '';
@@ -29,7 +32,7 @@
             .container {
                 position: relative;
                 z-index: 3;
-                padding-top: 5rem;
+                padding-top: 6rem;
                 @include media-breakpoint-up(lg) {
                     padding-top: 8rem;
                 }
@@ -71,16 +74,22 @@
 //BANNER VIDEO
 .banner-video {
     position: relative;
-    padding: .75rem 0 .5rem;
+    padding: .75rem 0 1rem;
+    @include media-breakpoint-up(lg) {
+        padding: .75rem 0 .5rem;
+    }
     &:after {
         background-color: $color-blue-main;
         position: absolute;
         content: '';
-        width: 70%;
         right: 0;
         top: 0;
         height: 100%;
         z-index: -1;
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+            width: 70%;
+        }
     }
     .content {
         display: flex;
@@ -89,6 +98,11 @@
         height: 100%;
         @include media-breakpoint-up(lg) {
             margin-left: .85rem;
+        }
+    }
+    iframe {
+        @include media-breakpoint-down(lg) {
+            height: 280px;
         }
     }
 }
@@ -117,10 +131,10 @@
 
     &-items-wrapper {
         display: grid;
-        grid-gap: 30px;
+        grid-gap: 25px;
         margin-top: 2rem;
-        margin-bottom: -5rem;
         @include media-breakpoint-up(lg) {
+            margin-bottom: -5rem;
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -129,21 +143,29 @@
             border-radius: 10px;
             background-color: #fff;
             //box-shadow: 0 0 5px #eee;
-            padding: 1.5rem 1.25rem;
+            padding: 1.5rem 1.25rem 0.75rem;
         }
     }
 }
 
 //FUTURE INVESTMENT
-.future-ivestment {
-    margin-top: 4rem;
+.future-investment.two-cols {
+    @include media-breakpoint-up(lg) {
+        margin-top: 4rem;
+    }
     h2 {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 2rem;
+        }
     }
 }
 
 //KNOW MORE
 .know-more {
+    @include media-breakpoint-down(lg) {
+        margin-top: 0;
+    }
     background-color: $color-blue-secondary;
     p, 
     h3 {
@@ -151,47 +173,117 @@
     }
 }
 
+//TWO COLS
+.two-cols {
+    @include media-breakpoint-down(lg) {
+        margin-top: 1rem;
+    }
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-start;
+        .btn {
+            margin-top: .5rem;
+            @include media-breakpoint-up(lg) {
+                margin-top: auto;
+            }
+        }
+    }
+    img {
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
 //TWO COLS TEXT
 .two-cols-text {
     &--wrapper {
         margin-top: 2rem;
-        columns: 2;
         text-align: justify;
         column-gap: 50px;
+        @include media-breakpoint-up(lg) {
+            columns: 2;
+        }
     }
 }
 
 //STRATEGIC SECTORS
-.strategic-sectors {
-    background-image: url('../../assets/images/impact_investment_bg.jpg');
+#strategic-sectors {
+    background-image: url('../../assets/images/finance.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     color: #fff;
     position: relative;
     min-height: 300px;
+    &.finance {
+        background-image: url('../../assets/images/finance.jpg');
+    }
+    &.real-state {
+        background-image: url('../../assets/images/real_state.jpg');
+    }
+    &.agrobusiness {
+        background-image: url('../../assets/images/agrobusiness.jpg');
+    }
+    &.energy {
+        background-image: url('../../assets/images/energy.jpg');
+    }
     &:after {
         content: '';
         position: absolute;
         display: block;
         height: 100%;
-        width: 50%;
+        width: 100%;
         top: 0;
         left: 0;
         background-color: rgba(0, 76, 143, 0.7);
         z-index: 1;
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
     }
 
     .text-content {
-        width: 50%;
+        width: 100%;
         position: relative;
         z-index: 3;
+        @include media-breakpoint-up(lg) {
+            width: 45%;
+        }
         h2 {
             color: #f5f5dc;
         }
         ul {
-            padding-left: 1rem;
-            list-style: square;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $color-blue-third;
+            li {
+                font-size: 1.25rem;
+                cursor: pointer;
+                margin-bottom: .35rem;
+                display: flex;
+                align-items: center;
+                transition: all 0.3s ease;
+                @include media-breakpoint-up(lg) {
+                    font-size: 1.5rem;
+                }
+                &:hover {
+                    color: $color-blue-third;
+                }
+                &.active {
+                    color: #c8ce55;
+                    font-weight: 700;
+                }
+                i {
+                    margin-left: 0.5rem;
+                    font-size: 1rem;
+                    transform: translateY(2px);
+                }
+            }
         }
     }
 }
@@ -222,6 +314,7 @@
             box-shadow: 0 0 12px #ddd;
             overflow: hidden;
             figure {
+                height: 200px;
                 img {
                     height: 100%;
                     width: 100%;

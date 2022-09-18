@@ -55,10 +55,11 @@ h1, h2, h3, h4 {
 h1, h2 {
     position: relative;
     margin-bottom: 1rem;
+    line-height: 1;
 }
 
 h1 {
-    font-size: 2.35rem;
+    font-size: 2.1rem;
     position: relative;
     @include media-breakpoint-up(lg) {
         font-size: 3rem;
@@ -66,15 +67,19 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     @include media-breakpoint-up(lg) {
         font-size: 2.5rem;
     }
 }
 
 section {
-    margin: 3rem 0 0;
-    padding: 2rem 0;
+    margin: 1.5rem 0 0;
+    padding: 1.5rem 0;
+    @include media-breakpoint-up(lg) {
+        padding: 2rem 0;
+        margin: 3rem 0 0;
+    }
 }
 
 p {
@@ -133,9 +138,12 @@ a {
 }
 
 .hero {
-    padding: 2rem;
+    padding: 1rem 0.5rem 1.75rem;
     margin-top: 5rem;
     position: relative;
+    @include media-breakpoint-up(lg) {
+        padding: 2rem;
+    }
     
     &:after {
         width: 100%;
@@ -150,17 +158,25 @@ a {
     }
 
     &-text {
-        padding: 2rem;
+        padding: 1.25rem;
         background-color: #fff;
         display: flex;
         flex-direction: column;
         margin-top: auto;
-        min-height: 300px;
         align-items: flex-start;
+        box-shadow: 0 0 8px #ccc;
+        @include media-breakpoint-up(lg) {
+            min-height: 300px;
+            box-shadow: none;
+            padding: 2rem;
+        }
     }
 
     &-image {
-        height: 400px;
+        height: 280px;
+        @include media-breakpoint-up(lg) {
+            height: 400px;
+        }
         img {
             height: 100%;
             width: 100%;
@@ -178,7 +194,7 @@ a {
     top: 0;
     width: 100%;
     z-index: 9999;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         //background-color: rgba($color: #000, $alpha: 0.8) !important;
         background-color: $color-blue-secondary;
     }
@@ -188,18 +204,6 @@ a {
         height: 100%;
         width: 0;
         transition: all 0.2s ease;
-    }
-}
-
-.two-cols {
-    .text-content {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        align-items: flex-start;
-        .btn {
-            margin-top: auto;
-        }
     }
 }
 
