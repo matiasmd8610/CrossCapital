@@ -298,6 +298,22 @@
     }
 }
 
+//CORPORATE-CITIZENSHIP 
+.corporate-citizenship {
+    background-color: #fff;
+    .text-content {
+        background-color: $color-blue-main;
+        padding: 1.5rem;
+        margin-bottom: -2rem;
+    }
+}
+
+//CONTACT
+form{
+    max-width: 800px!important;
+    margin-top: 30px!important;
+}
+
 //OUR EXPERTS
 .our-experts {
     .experts-wrapper {

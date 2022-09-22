@@ -11942,6 +11942,202 @@ header .navbar .navbar-collapse .language-selector li a:hover {
   color: #94b8d7;
 }
 
+footer {
+  /* ADD TO GLOBAL CSS gral begin */
+  /* ADD TO GLOBAL CSS gral end */
+  /* BREAKPOINTS */
+  /* footer bottom - copyright */
+  /* BREAKPOINTS */
+}
+footer *,
+footer ::after,
+footer ::before {
+  box-sizing: border-box;
+}
+footer ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+footer li.nav-item {
+  text-decoration: none;
+}
+footer .footer-txt {
+  text-align: center;
+}
+footer li.socials {
+  margin: 0 10px;
+  padding: 10px;
+  border: 3px solid #007bff;
+  border-radius: 100%;
+}
+footer .footer-info {
+  font-size: 12px;
+  padding-right: 50px;
+}
+footer .footer-nav .nav-item {
+  padding: 0.15rem 0.7rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  transition: all 0.4s ease-in-out;
+  border-right: 1px solid #333;
+}
+footer .footer-nav .nav-item:last-child {
+  border: 0;
+}
+footer .footer-nav .nav-item .nav-link {
+  padding: 0.15rem 0.7rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  transition: all 0.4s ease-in-out;
+}
+footer .footer-nav .nav-item .nav-link:hover {
+  color: #94b8d7;
+}
+footer .footer-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  /*float: right;*/
+}
+footer img.logo {
+  height: 170px;
+}
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+footer a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+footer img {
+  vertical-align: middle;
+  border-style: none;
+}
+footer .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+footer .col-lg-12,
+footer .col-lg-4,
+footer .col-lg-8,
+footer .col-md-4,
+footer .col-md-8 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  footer .col-md-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  footer .col-md-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+@media (min-width: 992px) {
+  footer .col-lg-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  footer .col-lg-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  footer .col-lg-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+footer .justify-content-between {
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+footer .align-items-center {
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+footer .mb-0 {
+  margin-bottom: 0 !important;
+}
+footer .mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+@media (min-width: 992px) {
+  footer .mb-lg-0 {
+    margin-bottom: 0 !important;
+  }
+}
+footer .text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+footer *,
+footer ::after,
+footer ::before {
+  box-sizing: border-box;
+}
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+footer a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+footer .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  footer .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  footer .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  footer .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .container {
+    max-width: 1320px;
+  }
+}
+footer .py-3 {
+  padding-top: 1rem !important;
+}
+footer .py-3 {
+  padding-bottom: 1rem !important;
+}
+footer .text-center {
+  text-align: center !important;
+}
+
 .main-slider .home-swiper .swiper-slide {
   height: 480px;
 }
@@ -12239,6 +12435,20 @@ header .navbar .navbar-collapse .language-selector li a:hover {
   background-color: #fff;
   padding: 1.5rem;
   margin-bottom: -2rem;
+}
+
+.corporate-citizenship {
+  background-color: #fff;
+}
+.corporate-citizenship .text-content {
+  background-color: #000a23;
+  padding: 1.5rem;
+  margin-bottom: -2rem;
+}
+
+form {
+  max-width: 800px !important;
+  margin-top: 30px !important;
 }
 
 .our-experts .experts-wrapper {
