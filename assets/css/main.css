@@ -11735,7 +11735,7 @@ header.sticky {
   z-index: 999;
 }
 header.header-home.sticky {
-  background: rgba(21, 63, 89, 0.75);
+  background: rgba(21, 63, 89, 0.8);
 }
 header.header-home .navbar .navbar-brand .logo-blue {
   display: none;
@@ -11774,6 +11774,7 @@ header .navbar .navbar-toggler {
   min-height: 40px;
   padding: 8px 6px;
   border-radius: 2px;
+  border: 0;
 }
 header .navbar .navbar-toggler:focus {
   box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.3);
@@ -11812,7 +11813,7 @@ header .navbar .navbar-brand img {
 header .navbar .navbar-brand img.logo-blue {
   display: block;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   header .navbar .navbar-brand img.logo-blue {
     display: none;
   }
@@ -11820,12 +11821,12 @@ header .navbar .navbar-brand img.logo-blue {
 header .navbar .navbar-brand img.logo-white {
   display: none;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   header .navbar .navbar-brand img.logo-white {
     display: block;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   header .navbar .navbar-brand img {
     width: 180px;
   }
@@ -11833,18 +11834,19 @@ header .navbar .navbar-brand img.logo-white {
 header .navbar .navbar-collapse {
   justify-content: flex-end;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   header .navbar .navbar-collapse {
     background-color: #000a23;
     position: absolute;
     left: 0;
     top: 70px;
     width: 100%;
+    padding: 0 15px;
   }
 }
 @media (max-width: 991.98px) {
   header .navbar .navbar-collapse .navbar-nav {
-    padding: 1.25rem 0;
+    padding: 1.25rem 0 0;
   }
 }
 header .navbar .navbar-collapse .navbar-nav .nav-item {
@@ -11854,6 +11856,7 @@ header .navbar .navbar-collapse .navbar-nav .nav-item {
   header .navbar .navbar-collapse .navbar-nav .nav-item {
     margin-bottom: 0.75rem;
     text-align: center;
+    border: 0 !important;
   }
 }
 header .navbar .navbar-collapse .navbar-nav .nav-item:last-child {
@@ -11895,6 +11898,8 @@ header .navbar .navbar-collapse .language-selector {
     background-color: transparent !important;
     top: initial;
     justify-content: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
   }
 }
 header .navbar .navbar-collapse .language-selector li {

@@ -18,7 +18,7 @@ header {
 
     &.header-home {
         &.sticky {
-            background: rgba(21, 63, 89, 0.75);
+            background: rgba(21, 63, 89, 0.8);
         }
         .navbar {
             .navbar-brand {
@@ -67,6 +67,7 @@ header {
             min-height: 40px;
             padding: 8px 6px;
             border-radius: 2px;
+            border: 0;
             &:focus {
                 box-shadow: 0 0 0 0.1rem rgb(255 255 255 / 30%);
             }
@@ -110,18 +111,18 @@ header {
             img {
                 &.logo-blue {
                     display: block;
-                    @include media-breakpoint-down(md) {
+                    @include media-breakpoint-down(lg) {
                         display: none;
                     }
                 }
                 &.logo-white {
                     display: none;
-                    @include media-breakpoint-down(md) {
+                    @include media-breakpoint-down(lg) {
                         display: block;
                     }
                 }
                 transition: all 0.5s ease;
-                @include media-breakpoint-down(md) {
+                @include media-breakpoint-down(lg) {
                     width: 180px;
                 }
             }
@@ -129,22 +130,24 @@ header {
 
         .navbar-collapse {
             justify-content: flex-end;
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 background-color: $color-blue-main;
                 position: absolute;
                 left: 0;
                 top: 70px;
                 width: 100%;
+                padding: 0 15px;
             }
             .navbar-nav {
                 @include media-breakpoint-down(lg) {
-                    padding: 1.25rem 0;
+                    padding: 1.25rem 0 0;
                 }
                 .nav-item {
                     border-right: 1px solid $color-main;
                     @include media-breakpoint-down(lg) {
                         margin-bottom: .75rem;
                         text-align: center;
+                        border: 0 !important;
                     }
                     &:last-child {
                         border: 0;
@@ -181,6 +184,8 @@ header {
                     background-color: transparent !important;
                     top: initial;
                     justify-content: center;
+                    padding-top: 15px;
+                    border-top: 1px solid rgba($color: #fff, $alpha: 0.5);
                 }
 
                 li {
