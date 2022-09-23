@@ -13,16 +13,21 @@ require 'phpmailer/SMTP.php';
 
 $name = $_POST['name'];
 $email = $_POST['email'];
-$comment = $_POST['comment'];
-$subject = 'Mensaje recibido desde lucioteposiciona.com';
+$subject = $_POST['subject'];
+$message = $_POST['message'];
+
+$recaptcha_secret = "";
+$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$recaptcha_secret."&response=".$_POST['g-recaptcha-response']);
+$response = json_decode($response, true);
 
 if( empty(trim($name)) ) $name = 'anonimo';
 
 $body = <<<HTML
-    <h1>Mensaje recibido desde lucioteposiciona.com</h1>
+    <h1>Mensaje recibido desde crosscapital.com</h1>
     <p>De: $name | $email</p>
+    <hr />
     <!-- <h2>Mensaje:</h2> -->
-    $comment
+    $message
 HTML;
 
 $mailer = new PHPMailer(true);
@@ -52,13 +57,16 @@ try {
     $mailer->AltBody = strip_tags($body);
     $mailer->CharSet = 'UTF-8';
 
-    $mailer->send();
-    //echo "Mail has been sent successfully!";
-    //var_dump($rta);
-    header("Location: thank-you.html" );
+    if($response["success"] === true){
+        $mailer->send();
+        header("Location: thank-you.html" );
+    } else {
+        header("Location: 404.html" );
+    }
 
 } catch (Exception $e) {
     return "El mensaje no pudo ser enviado. Error: $mailer->ErrorInfo";
 }
 
 ?>
+

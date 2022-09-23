@@ -31,6 +31,12 @@ header {
             }
             .navbar-collapse {
                 justify-content: flex-end;
+                @include media-breakpoint-up(xl) {
+                    padding-right: 2rem;
+                }
+                @include media-breakpoint-up(xxl) {
+                    padding-right: 0;
+                }
 
                 .navbar-nav {
                     .nav-item {
@@ -139,12 +145,12 @@ header {
                 padding: 0 15px;
             }
             .navbar-nav {
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(xl) {
                     padding: 1.25rem 0 0;
                 }
                 .nav-item {
                     border-right: 1px solid $color-main;
-                    @include media-breakpoint-down(lg) {
+                    @include media-breakpoint-down(xl) {
                         margin-bottom: .75rem;
                         text-align: center;
                         border: 0 !important;
@@ -157,13 +163,20 @@ header {
                         text-transform: uppercase;
                         font-size: 0.7rem;
                         transition: all 0.25s ease-in-out;
-                        @include media-breakpoint-down(lg) {
-                            font-size: 1rem;
+                        font-size: 1rem;
+                        color: $color-blue-main;
+                        @include media-breakpoint-down(xl) {
                             color: #fff;
+                        }
+                        @include media-breakpoint-up(xl) {
+                            padding-right: 0.6rem;
+                        }
+                        @include media-breakpoint-up(xxl) {
+                            font-size: 0.7rem;
                         }
                         &:hover {
                             color: $color-blue-third;
-                            @include media-breakpoint-up(lg) {
+                            @include media-breakpoint-up(xl) {
                                 transform: translateY(-4px);
                             }
                         }
@@ -178,7 +191,7 @@ header {
                 padding: 0.1rem 0.25rem;
                 position: absolute;
                 right: 0;
-                top: 30px;
+                top: 27px;
                 @include media-breakpoint-down(lg) {
                     position: relative;
                     background-color: transparent !important;
