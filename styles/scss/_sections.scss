@@ -112,13 +112,20 @@
     .companies-swiper {
         padding-top: .75rem;
         .swiper-wrapper {
-            padding-bottom: 2rem;
+            padding: 0 0.25rem 2rem 0.25rem;
         }
         .swiper-slide {
-            height: 150px;
+            //height: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 12px #ddd;
+            a {
+                text-decoration: none;
+            }
             img {
                 max-width: 100%;
                 transition: all 0.3s ease-in;
@@ -341,8 +348,11 @@ form{
     .experts-wrapper {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 35px;
+        grid-gap: 25px;
         margin-top: 2rem;
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
         @include media-breakpoint-up(lg) {
             grid-template-columns: repeat(4, 1fr);
         }
