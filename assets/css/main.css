@@ -11632,6 +11632,28 @@ figure {
   color: #fff;
   border-color: #000a23;
 }
+.btn-link {
+  padding: 0.35rem 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000a23;
+  letter-spacing: -0.01em;
+}
+.btn-link i {
+  transition: all 0.3s ease;
+  margin-left: 0.2rem;
+  font-size: 0.7rem;
+}
+.btn-link:hover {
+  color: #94b8d7;
+}
+.btn-link:hover i {
+  transform: translateX(3px);
+}
+.btn-link:focus {
+  box-shadow: none;
+}
 
 a {
   color: #000a23;
@@ -11743,19 +11765,6 @@ header.header-home .navbar .navbar-brand .logo-blue {
 header.header-home .navbar .navbar-brand .logo-white {
   display: block;
 }
-header.header-home .navbar .navbar-collapse {
-  justify-content: flex-end;
-}
-@media (min-width: 1200px) {
-  header.header-home .navbar .navbar-collapse {
-    padding-right: 2rem;
-  }
-}
-@media (min-width: 1400px) {
-  header.header-home .navbar .navbar-collapse {
-    padding-right: 0;
-  }
-}
 header.header-home .navbar .navbar-collapse .navbar-nav .nav-item {
   border-right: 1px solid #fff;
 }
@@ -11775,7 +11784,7 @@ header.header-home .navbar .navbar-collapse .language-selector li:first-child:af
 header .navbar {
   padding: 0.85rem 0;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   header .navbar {
     background-color: #153f59;
   }
@@ -11823,7 +11832,7 @@ header .navbar .navbar-brand img {
 header .navbar .navbar-brand img.logo-blue {
   display: block;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   header .navbar .navbar-brand img.logo-blue {
     display: none;
   }
@@ -11831,7 +11840,7 @@ header .navbar .navbar-brand img.logo-blue {
 header .navbar .navbar-brand img.logo-white {
   display: none;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   header .navbar .navbar-brand img.logo-white {
     display: block;
   }
@@ -11852,6 +11861,16 @@ header .navbar .navbar-collapse {
     top: 70px;
     width: 100%;
     padding: 0 15px;
+  }
+}
+@media (min-width: 1200px) {
+  header .navbar .navbar-collapse {
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1400px) {
+  header .navbar .navbar-collapse {
+    padding-right: 0;
   }
 }
 @media (max-width: 1199.98px) {
@@ -11875,23 +11894,18 @@ header .navbar .navbar-collapse .navbar-nav .nav-item:last-child {
 header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
   padding: 0.15rem 0.7rem;
   text-transform: uppercase;
-  font-size: 0.7rem;
   transition: all 0.25s ease-in-out;
-  font-size: 1rem;
   color: #000a23;
 }
 @media (max-width: 1199.98px) {
   header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+    font-size: 1rem;
     color: #fff;
   }
 }
 @media (min-width: 1200px) {
   header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
     padding-right: 0.6rem;
-  }
-}
-@media (min-width: 1400px) {
-  header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
     font-size: 0.7rem;
   }
 }
@@ -11913,7 +11927,7 @@ header .navbar .navbar-collapse .language-selector {
   right: 0;
   top: 27px;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   header .navbar .navbar-collapse .language-selector {
     position: relative;
     background-color: transparent !important;
@@ -12270,11 +12284,28 @@ footer .text-center {
   }
 }
 
+.our-companies .companies-swiper {
+  padding-top: 0.75rem;
+}
 .our-companies .companies-swiper .swiper-wrapper {
   padding-bottom: 2rem;
 }
+.our-companies .companies-swiper .swiper-slide {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .our-companies .companies-swiper .swiper-slide img {
   max-width: 100%;
+  transition: all 0.3s ease-in;
+}
+.our-companies .companies-swiper .swiper-slide img.logo-patagonia-energy {
+  max-height: 160px;
+}
+.our-companies .companies-swiper .swiper-slide img:hover {
+  transform: translateY(-15px);
+  opacity: 0.7;
 }
 .our-companies .companies-swiper .swiper-pagination {
   bottom: 0;
@@ -12300,6 +12331,16 @@ footer .text-center {
   border-radius: 10px;
   background-color: #fff;
   padding: 1.5rem 1.25rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.investment-criteria-items-wrapper div .btn-link {
+  margin-top: 0.5rem;
+}
+@media (min-width: 992px) {
+  .investment-criteria-items-wrapper div .btn-link {
+    margin-top: auto;
+  }
 }
 
 @media (min-width: 992px) {
@@ -12358,10 +12399,10 @@ footer .text-center {
 .two-cols-text--wrapper {
   margin-top: 2rem;
   text-align: justify;
-  column-gap: 50px;
 }
 @media (min-width: 992px) {
   .two-cols-text--wrapper {
+    column-gap: 70px;
     columns: 2;
   }
 }
@@ -12475,7 +12516,7 @@ form {
 .our-experts .experts-wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 30px;
+  grid-gap: 35px;
   margin-top: 2rem;
 }
 @media (min-width: 992px) {
@@ -12495,10 +12536,11 @@ form {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center top;
 }
 .our-experts .experts-wrapper .expert-card--body {
   padding: 0.75rem;
+  text-align: center;
 }
 .our-experts .experts-wrapper .expert-card--name {
   font-size: 1.25rem;

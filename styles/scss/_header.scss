@@ -30,14 +30,6 @@ header {
                 }
             }
             .navbar-collapse {
-                justify-content: flex-end;
-                @include media-breakpoint-up(xl) {
-                    padding-right: 2rem;
-                }
-                @include media-breakpoint-up(xxl) {
-                    padding-right: 0;
-                }
-
                 .navbar-nav {
                     .nav-item {
                         border-right: 1px solid #fff;
@@ -66,7 +58,7 @@ header {
 
     .navbar {
         padding: .85rem 0;
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
             background-color: $color-blue-secondary;
         }
         .navbar-toggler {
@@ -75,7 +67,7 @@ header {
             border-radius: 2px;
             border: 0;
             &:focus {
-                box-shadow: 0 0 0 0.1rem rgb(255 255 255 / 30%);
+                box-shadow: 0 0 0 0.1rem rgba(255, 255, 255 , 0.3);
             }
             &[aria-expanded=true] {
                 .navbar-toggler-icon {
@@ -117,13 +109,13 @@ header {
             img {
                 &.logo-blue {
                     display: block;
-                    @include media-breakpoint-down(lg) {
+                    @include media-breakpoint-down(xl) {
                         display: none;
                     }
                 }
                 &.logo-white {
                     display: none;
-                    @include media-breakpoint-down(lg) {
+                    @include media-breakpoint-down(xl) {
                         display: block;
                     }
                 }
@@ -144,6 +136,12 @@ header {
                 width: 100%;
                 padding: 0 15px;
             }
+            @include media-breakpoint-up(xl) {
+                padding-right: 2rem;
+            }
+            @include media-breakpoint-up(xxl) {
+                padding-right: 0;
+            }
             .navbar-nav {
                 @include media-breakpoint-down(xl) {
                     padding: 1.25rem 0 0;
@@ -161,17 +159,14 @@ header {
                     .nav-link {
                         padding: 0.15rem .7rem;
                         text-transform: uppercase;
-                        font-size: 0.7rem;
                         transition: all 0.25s ease-in-out;
-                        font-size: 1rem;
                         color: $color-blue-main;
                         @include media-breakpoint-down(xl) {
+                            font-size: 1rem;
                             color: #fff;
                         }
                         @include media-breakpoint-up(xl) {
                             padding-right: 0.6rem;
-                        }
-                        @include media-breakpoint-up(xxl) {
                             font-size: 0.7rem;
                         }
                         &:hover {
@@ -192,7 +187,7 @@ header {
                 position: absolute;
                 right: 0;
                 top: 27px;
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(xl) {
                     position: relative;
                     background-color: transparent !important;
                     top: initial;

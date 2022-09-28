@@ -110,12 +110,26 @@
 //OUR COMPANIES
 .our-companies {
     .companies-swiper {
+        padding-top: .75rem;
         .swiper-wrapper {
             padding-bottom: 2rem;
         }
         .swiper-slide {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             img {
                 max-width: 100%;
+                transition: all 0.3s ease-in;
+                &.logo-patagonia-energy {
+                    //transform: translateY(-15px);
+                    max-height: 160px;
+                }
+                &:hover {
+                    transform: translateY(-15px);
+                    opacity: 0.7;
+                }
             }
         }
         .swiper-pagination {
@@ -144,6 +158,14 @@
             background-color: #fff;
             //box-shadow: 0 0 5px #eee;
             padding: 1.5rem 1.25rem 0.75rem;
+            display: flex;
+            flex-direction: column; 
+            .btn-link {
+                margin-top: 0.5rem;
+                @include media-breakpoint-up(lg) {
+                    margin-top: auto;
+                }
+            }
         }
     }
 }
@@ -202,8 +224,8 @@
     &--wrapper {
         margin-top: 2rem;
         text-align: justify;
-        column-gap: 50px;
         @include media-breakpoint-up(lg) {
+            column-gap: 70px;
             columns: 2;
         }
     }
@@ -319,7 +341,7 @@ form{
     .experts-wrapper {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
+        grid-gap: 35px;
         margin-top: 2rem;
         @include media-breakpoint-up(lg) {
             grid-template-columns: repeat(4, 1fr);
@@ -335,13 +357,13 @@ form{
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
-                    object-position: center center;
+                    object-position: center top;
                 }
             }
 
             &--body {
                 padding: .75rem;
-
+                text-align: center;
             }
 
             &--name {
