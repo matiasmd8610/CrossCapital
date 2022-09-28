@@ -341,7 +341,15 @@
 form{
     max-width: 800px!important;
     margin-top: 30px!important;
+
+    label {font-size: 18px;font-family: Avenir; font-weight: 700;}
+    input.form-control{font-size: 16px;font-family: Avenir; font-weight: 400;}
 }
+
+.row form{
+    margin: 0 auto;
+}
+
 
 //OUR EXPERTS
 .our-experts {

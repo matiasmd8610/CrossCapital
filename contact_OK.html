@@ -237,8 +237,8 @@
       const formValues = {
         name: form.elements.name.value,
         email: form.elements.email.value,
-        subject: form.elements.subject.value,
-        message: form.elements.message.value
+        subject: form.elements.email.value,
+        message: form.elements.comment.value
       };
 
       const errors = validate(formValues, constraints);
@@ -246,7 +246,7 @@
       if (errors) {
         event.preventDefault();
 
-        console.log(errors);
+        //console.log(errors);
         Object.keys(errors).forEach(key => {
           //console.log(key, errors[key]);
           console.log(key);
