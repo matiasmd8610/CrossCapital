@@ -12294,9 +12294,10 @@ footer .text-center {
   padding-top: 0.75rem;
 }
 .our-companies .companies-swiper .swiper-wrapper {
-  padding: 0 0.25rem 2rem 0.25rem;
+  padding: 0 0 2rem 0;
 }
 .our-companies .companies-swiper .swiper-slide {
+  min-height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12307,6 +12308,9 @@ footer .text-center {
 }
 .our-companies .companies-swiper .swiper-slide a {
   text-decoration: none;
+}
+.our-companies .companies-swiper .swiper-slide a p {
+  font-size: 0.85rem;
 }
 .our-companies .companies-swiper .swiper-slide img {
   max-width: 100%;

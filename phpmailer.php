@@ -42,8 +42,6 @@ try {
     $mailer->Password = 'jr@gQXC3wG';                          
     $mailer->SMTPSecure = 'ssl';
     $mailer->Port = 465;
-    //$mailer->AltBody = strip_tags($body);
-    //$mailer->CharSet = 'UTF-8';
 
     //Recipients
     $mailer->setFrom( $email, "$name" );
