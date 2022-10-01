@@ -11744,7 +11744,12 @@ a:hover {
 }
 
 .intro {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
+}
+@media (min-width: 992px) {
+  .intro {
+    font-size: 1.35rem;
+  }
 }
 
 header {
