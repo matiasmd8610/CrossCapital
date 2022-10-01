@@ -11564,7 +11564,7 @@ h1, .h1 {
 }
 @media (min-width: 992px) {
   h1, .h1 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -11573,7 +11573,7 @@ h2, .h2 {
 }
 @media (min-width: 992px) {
   h2, .h2 {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -11698,6 +11698,13 @@ a:hover {
     box-shadow: none;
     padding: 2rem;
   }
+}
+.hero-text div {
+  display: flex;
+  margin-bottom: 0.35rem;
+}
+.hero-text div i {
+  margin-right: 0.75rem;
 }
 .hero-image {
   height: 280px;
@@ -11980,6 +11987,7 @@ header .navbar .navbar-collapse .language-selector li a:hover {
 footer {
   background-color: #153f59;
   padding: 1.75rem 0 0;
+  margin-top: 2rem;
 }
 footer p {
   color: #fff;
@@ -12283,6 +12291,11 @@ footer .copy {
   background: rgb(85, 121, 150);
   background: linear-gradient(360deg, #94b8d7 45%, #d3e2ef 100%);
 }
+@media (min-width: 992px) {
+  .investment-criteria {
+    margin-bottom: 7rem;
+  }
+}
 .investment-criteria-items-wrapper {
   display: grid;
   grid-gap: 25px;
@@ -12476,12 +12489,16 @@ footer .copy {
   margin-bottom: -2rem;
 }
 
+.contact-form {
+  margin-top: 0;
+}
 .contact-form form {
   max-width: 800px;
   margin: 3rem auto 0;
   background-color: rgba(148, 184, 215, 0.35);
   padding: 1.25rem;
   border-radius: 0.5rem;
+  box-shadow: 0 0 8px #ddd;
 }
 .contact-form form label {
   font-size: 0.75rem;
@@ -12498,6 +12515,15 @@ footer .copy {
 }
 .contact-form form .form-control::placeholder {
   color: #7d7d7d;
+}
+.contact-form form .error-msg {
+  color: #f00000;
+  font-size: 14px;
+  padding-top: 5px;
+  display: none;
+}
+.contact-form form .error-msg.visible {
+  display: block;
 }
 
 .our-experts .experts-wrapper {

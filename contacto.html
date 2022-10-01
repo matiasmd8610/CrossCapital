@@ -29,9 +29,9 @@
 
   <!-- HEADER: Begin -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-xl navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="index.html">
           <img class="logo-white" src="./assets/images/logo_white.png" alt="Cross Capital" width="230">
           <img class="logo-blue" src="./assets/images/logo_main.png" alt="Cross Capital" width="230">
         </a>
@@ -45,19 +45,19 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="about-us.html">Sobre Nosotros</a>
+              <a class="nav-link" aria-current="page" href="sobre-nosotros.html">Sobre Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/main-holdings.html">Principales Inversiones</a>
+              <a class="nav-link" href="principales-inversiones.html">Principales Inversiones</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="our-people.html">Nuestro Equipo</a>
+              <a class="nav-link" href="nuestro-equipo.html">Nuestro Equipo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="investment-criteria.html">Criterios de Inversión</a>
+              <a class="nav-link" href="criterios-de-inversion.html">Criterios de Inversión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="corporate-citizenship.html">Compromiso Social</a>
+              <a class="nav-link" href="compromiso-social.html">Compromiso social</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contacto.html">Contacto</a>
@@ -78,14 +78,17 @@
     <section class="hero">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 d-flex">
+          <div class="col-lg-6">
             <div class="hero-text">
               <h1>Contáctenos</h1>
-              <i class="fa-solid fa-location-dot"></i>
-              <p> Av. Del Libertador 498, 4º piso <br> (1001) Ciudad Autónoma de Buenos Aires, Argentina</p>
-              <br>
-              <i class="fa-solid fa-phone"> </i>
-              <p>+54 11 7078-5560</p>
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <p> Av. Del Libertador 498, 4º piso <br> (1001) Ciudad Autónoma de Buenos Aires, Argentina</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-phone"> </i>
+                <p><a href="tel:+541170785560">+54 11 7078-5560</a></p>
+              </div>
             </div>
 
           </div>
@@ -106,10 +109,12 @@
             <div class="col">
               <label for="name">Nombre</label>
               <input type="text" class="form-control" name="name" id="name" placeholder="Ingrese su nombre">
+              <div id="name-error" class="error-msg">Nombre inválido</div>
             </div>
             <div class="col form-group">
               <label for="email">Email</label>
               <input type="email" class="form-control" name="email" id="email" placeholder="nombre@dominio.com">
+              <div id="email-error" class="error-msg">Email inválido</div>
             </div>
           </div>
 
@@ -117,11 +122,13 @@
             <label for="subject">Asunto</label>
             <input type="text" class="form-control" id="subject" name="subject"
               placeholder="Ingrese asunto de su consulta">
+              <div id="subject-error" class="error-msg">Asunto inválido</div>
           </div>
 
           <div class="form-group">
-            <label for="Textarea">Mensaje</label>
+            <label for="message">Mensaje</label>
             <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+            <div id="message-error" class="error-msg">Mensaje inválido</div>
           </div>
 
           <div class="form-group mt-4">
@@ -137,7 +144,7 @@
   </main>
 
   <!-- FOOTER: Begin -->
-  <footer id="footer" itemscope itemtype="https://schema.org/WPFooter" style="margin-top: 50px;">
+  <footer id="footer" itemscope itemtype="https://schema.org/WPFooter">
     <div class="container">
       <div class="row justify-content-between align-items-center">
 
@@ -194,7 +201,7 @@
       </div>
     </div>
     <div class="copy text-center">
-      ©<span class="year-copy">2022</span> Cross Capital. <span class="rights">Todos los derechos reservados.</span>
+      ©<span class="year-copy"></span> Cross Capital. <span class="rights">Todos los derechos reservados.</span>
     </div>
   </footer>
   <!-- FOOTER: End -->
@@ -250,18 +257,12 @@
       if (errors) {
         event.preventDefault();
 
-        console.log(errors);
+        //console.log(errors);
         Object.keys(errors).forEach(key => {
           //console.log(key, errors[key]);
-          console.log(key);
-          //document.querySelector(`#${key}-error`).classList.add('visible');
+          //console.log(key);
+          document.querySelector(`#${key}-error`).classList.add('visible');
         });
-
-        /* const errorMessage = Object.values(errors).map(function (fieldValues) {
-            return fieldValues.join(', ')
-          }).join("\n"); */
-
-        //alert(errorMessage);
       }
     }, false);
 

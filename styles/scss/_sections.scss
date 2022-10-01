@@ -175,6 +175,9 @@
 .investment-criteria {
     background: rgb(85,121,150);
     background: linear-gradient(360deg, #94b8d7 45%, #d3e2ef 100%);
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 7rem;
+    }
 
     &-items-wrapper {
         display: grid;
@@ -365,12 +368,14 @@
 
 //CONTACT
 .contact-form {
+    margin-top: 0;
     form {
         max-width: 800px;
         margin: 3rem auto 0;
         background-color: rgb(148, 184, 215, 0.35);
         padding: 1.25rem;
         border-radius: .5rem;
+        box-shadow: 0 0 8px #ddd;
     
         label {
             font-size: 0.75rem;
@@ -387,6 +392,16 @@
             }
             &::placeholder {
                 color: #7d7d7d;
+            }
+        }
+
+        .error-msg {
+            color: #f00000;
+            font-size: 14px;
+            padding-top: 5px;
+            display: none;
+            &.visible {
+                display: block;
             }
         }
     }
