@@ -16,7 +16,7 @@ $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-$recaptcha_secret = "";
+$recaptcha_secret = "6LdNlTsiAAAAABdaLk6Ox0jKgH1e3Jwfs6IJYho_";
 $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$recaptcha_secret."&response=".$_POST['g-recaptcha-response']);
 $response = json_decode($response, true);
 

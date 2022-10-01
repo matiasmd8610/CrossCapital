@@ -1,37 +1,81 @@
 footer {
-  /* ADD TO GLOBAL CSS gral begin */
   background-color: $color-blue-secondary;
+  padding: 1.75rem 0 0;
 
   p {
     color: #fff;
+    margin: 0;
   }
 
   i {
     color: #fff;
   }
-  /* ADD TO GLOBAL CSS gral end */
-  .footer-txt {
-    text-align: center;
-  }
-
-  li.socials {
-    margin: 0 10px;
-    padding: 10px;
-    border: 3px solid #fff;
-    border-radius: 100%;
-    width: 30px;
-    height: 30px;
-    align-items: center;
-  }
-
-  .footer-info {
-    font-size: 12px;
-    padding-right: 50px;
-  }
 
   .footer-bottom {
     color: #fff;
     font-size: 0.7rem;
+    margin-top: 2rem;
+    @include media-breakpoint-up(lg) {
+      margin-top: 3rem;
+    }
+
+    .footer-nav-info {
+      display: flex;
+      padding: 0;
+      flex-direction: column;
+
+      @include media-breakpoint-up(lg) {
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      .footer-info {
+        font-size: 0.7rem;
+        padding-right: 50px;
+        display: flex;
+        align-items: self-start;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 1.25rem;
+          padding-right: 0;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        i {
+          margin-right: 0.5rem;
+          font-size: 1rem;
+        }
+
+        &.socials {
+          padding: 0;
+          @include media-breakpoint-down(lg) {
+            margin-top: 1.25rem;
+            display: flex;
+            justify-content: center;
+          }
+          a {
+            padding: 10px;
+            border: 2px solid #fff;
+            border-radius: 100%;
+            transform: translateY(-10px);
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            display: flex;
+          }
+
+          i {
+            font-size: 0.75rem;
+          }
+        }
+      }
+
+    }
   }
 
   .footer-nav {
@@ -40,20 +84,27 @@ footer {
       text-transform: uppercase;
       font-size: 0.6rem;
       transition: all 0.4s ease-in-out;
-      border-right: 1px solid $color-blue-third;
+      @include media-breakpoint-up(lg) {
+        border-right: 1px solid $color-blue-third;
+      }
 
       &:last-child {
         border: 0;
       }
 
-      .text-link {
-        padding: 0.15rem 0.7rem;
+      .nav-link {
+        padding: 0.15rem 0;
         text-transform: uppercase;
-        font-size: 0.6rem;
-        transition: all 0.4s ease-in-out;
+        font-size: 0.65rem;
+        transition: all 0.3s ease-in-out;
+        color: #fff;
+        @include media-breakpoint-up(lg) {
+          padding: 0.15rem 0.7rem;
+        }
 
         &:hover {
-          color: #fff;
+          color: $color-blue-third;
+          transform: translateY(-4px);
         }
       }
     }
@@ -63,175 +114,25 @@ footer {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 20px 0;
-    /*float: right;*/
-  }
+    margin: 0;
+    flex-direction: column;
+    padding: 0;
 
-  img.logo {
-    height: 170px;
-  }
-
-  a {
-    color: $color-blue-third;
-    text-decoration: none;
-    background-color: transparent;
-  }
-
-  a:hover {
-    color: $color-blue-third;
-    text-decoration: none;
-  }
-
-  img {
-    vertical-align: middle;
-    border-style: none;
-  }
-
-  .row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-
-  .col-lg-12,
-  .col-lg-4,
-  .col-lg-8,
-  .col-md-4,
-  .col-md-8 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  /* BREAKPOINTS */
- 
-  @media (min-width:768px) {
-    .col-md-4 {
-      -ms-flex: 0 0 33.333333%;
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%;
-    }
-
-    .col-md-8 {
-      -ms-flex: 0 0 66.666667%;
-      flex: 0 0 66.666667%;
-      max-width: 66.666667%;
-    }
-  }
-  @media (min-width:992px) {
-    .col-lg-4 {
-      -ms-flex: 0 0 33.333333%;
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%;
-    }
-
-    .col-lg-8 {
-      -ms-flex: 0 0 66.666667%;
-      flex: 0 0 66.666667%;
-      max-width: 66.666667%;
-    }
-
-    .col-lg-12 {
-      -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
-      max-width: 100%;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      float: right;
     }
   }
 
-  .justify-content-between {
-    -ms-flex-pack: justify!important;
-    justify-content: space-between!important;
-  }
-
-  .align-items-center {
-    -ms-flex-align: center!important;
-    align-items: center!important;
-  }
-
-  .mb-0 {
-    margin-bottom: 0!important;
-  }
-
-  .mb-4 {
-    margin-bottom: 1.5rem!important;
-    /*margin-top: 1.5rem;*/
-  }
-/*
-  .logo-footer {
-    text-align: center;
-  }*/
-
-  @media (min-width:992px) {
-    .mb-lg-0 {
-      margin-bottom: 0!important;
+  .copy {
+    margin-top: 0.5rem;
+    font-size: 0.65rem;
+    padding: 0.75rem 0;
+    background-color: $color-blue-main;
+    color: #fff;
+    @include media-breakpoint-up(lg) {
+      margin-top: 1.75rem;
     }
   }
 
-  .text-link {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  //////* footer bottom - copyright *//////
-  *,
-  ::after,
-  ::before {
-    box-sizing: border-box;
-  }
-
-  a {
-    color: $color-blue-third;
-    text-decoration: none;
-    background-color: transparent;
-  }
-
-  a:hover {
-    color: $color-blue-third;
-    text-decoration: none;
-  }
-
-  .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  /* BREAKPOINTS */
-  @media (min-width:576px) {
-    .container {
-      max-width: 540px;
-    }
-  }
-  @media (min-width:768px) {
-    .container {
-      max-width: 720px;
-    }
-  }
-  @media (min-width:992px) {
-    .container {
-      max-width: 960px;
-    }
-  }
-  @media (min-width:1200px) {
-    .container {
-      max-width: 1140px;
-    }
-  }
-
-  .py-3 {
-    padding-top: 1rem!important;
-  }
-
-  .py-3 {
-    padding-bottom: 1rem!important;
-  }
-
-  .text-center {
-    text-align: center!important;
-  }
 }

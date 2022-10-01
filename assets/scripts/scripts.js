@@ -19,3 +19,6 @@ window.addEventListener('scroll', () => {
         document.querySelector("#scroll-indicator").style.backgroundColor = "transparent";
     }
 });
+
+//Update copy automatically
+document.querySelector('.year-copy').innerText = new Date().getFullYear();

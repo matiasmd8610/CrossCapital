@@ -2,7 +2,7 @@
 .main-slider {
     .home-swiper {
         .swiper-slide {
-            height: 480px;
+            height: 450px;
             @include media-breakpoint-up(lg) {
                 height: 550px;
             }
@@ -38,7 +38,7 @@
                 }
                 .text {
                     @include media-breakpoint-up(lg) {
-                        max-width: 50%;
+                        max-width: 55%;
                     }
                     h3 {
                         color: $color-blue-third;
@@ -110,36 +110,59 @@
 //OUR COMPANIES
 .our-companies {
     .companies-swiper {
-        padding-top: .75rem;
+        padding: .5rem;
         .swiper-wrapper {
             padding: 0 0 2rem 0;
         }
         .swiper-slide {
-            min-height: 350px;
+            min-height: 380px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             padding: 1rem;
             border-radius: 10px;
             background-color: #fff;
-            box-shadow: 0 0 12px #ddd;
+            box-shadow: 0 0 8px #ddd;
+            @include media-breakpoint-up(lg) {
+                min-height: 410px;
+            }
             a {
                 text-decoration: none;
+                display: block;
+                height: 100%;
                 p {
                     font-size: 0.85rem;
                 }
-            }
-            img {
-                max-width: 100%;
-                transition: all 0.3s ease-in;
-                &.logo-patagonia-energy {
-                    //transform: translateY(-15px);
-                    max-height: 160px;
+                hr {
+                    height: 2px;
+                    background-color: $color-blue-third;
+                    border: 0;
                 }
                 &:hover {
-                    transform: translateY(-15px);
-                    opacity: 0.7;
+                    img {
+                        transform: rotate(360deg);
+                    }
                 }
+            }
+            figure {
+                width: 100%;
+                height: 100px;
+                img {
+                    transition: all 0.3s ease-in;
+                    object-fit: contain;
+                    object-position: center center;
+                    width: 100%;
+                    height: 100%;
+                    &.logo-patagonia-energy {
+                        //transform: translateY(-15px);
+                        max-height: 160px;
+                    }
+                    &:hover {
+                        //transform: translateY(-15px);
+                        opacity: 0.5;
+                    }
+                }
+
             }
         }
         .swiper-pagination {
@@ -341,18 +364,33 @@
 }
 
 //CONTACT
-form{
-    max-width: 800px!important;
-    margin-top: 30px!important;
-
-    label {font-size: 18px;font-family: Avenir; font-weight: 700;}
-    input.form-control{font-size: 16px;font-family: Avenir; font-weight: 400;}
+.contact-form {
+    form {
+        max-width: 800px;
+        margin: 3rem auto 0;
+        background-color: rgb(148, 184, 215, 0.35);
+        padding: 1.25rem;
+        border-radius: .5rem;
+    
+        label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+    
+        .form-control {
+            font-size: 0.9rem;
+            border-color: #ccc;
+            &:focus {
+                border-color: $color-blue-main;
+                box-shadow: none;
+            }
+            &::placeholder {
+                color: #7d7d7d;
+            }
+        }
+    }
 }
-
-.row form{
-    margin: 0 auto;
-}
-
 
 //OUR EXPERTS
 .our-experts {
