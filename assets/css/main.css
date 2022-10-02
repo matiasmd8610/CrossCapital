@@ -11994,6 +11994,9 @@ footer {
   padding: 1.75rem 0 0;
   margin-top: 2rem;
 }
+footer .logo-footer {
+  max-width: 100%;
+}
 footer p {
   color: #fff;
   margin: 0;
@@ -12248,7 +12251,7 @@ footer .copy {
   padding: 1rem;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 0 8px #ddd;
+  box-shadow: 0 0 11px #c4c4c4;
 }
 @media (min-width: 992px) {
   .our-companies .companies-swiper .swiper-slide {
@@ -12268,8 +12271,10 @@ footer .copy {
   background-color: #94b8d7;
   border: 0;
 }
-.our-companies .companies-swiper .swiper-slide a:hover img {
-  transform: rotate(360deg);
+.our-companies .companies-swiper .swiper-slide a:hover {
+  /* img {
+      transform: rotate(360deg);
+  } */
 }
 .our-companies .companies-swiper .swiper-slide figure {
   width: 100%;
@@ -12549,7 +12554,7 @@ footer .copy {
 }
 .our-experts .experts-wrapper .expert-card {
   border-radius: 10px;
-  box-shadow: 0 0 12px #ddd;
+  box-shadow: 0 0 11px #c4c4c4;
   overflow: hidden;
 }
 .our-experts .experts-wrapper .expert-card figure {
