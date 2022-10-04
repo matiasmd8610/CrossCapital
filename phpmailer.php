@@ -36,20 +36,19 @@ try {
     //Server setting
     $mailer->SMTPDebug = 0;
     $mailer->isSMTP();
-    $mailer->Host = 'c1591626.ferozo.com';
+    $mailer->Host = 'c1591626.ferozo.com'; //Server
     $mailer->SMTPAuth = true;  
-    $mailer->Username = 'no-reply@c1591626.ferozo.com';
-    $mailer->Password = 'jr@gQXC3wG';                          
+    $mailer->Username = 'no-reply@c1591626.ferozo.com'; //Recipient email
+    $mailer->Password = 'jr@gQXC3wG'; //Recipient email password                         
     $mailer->SMTPSecure = 'ssl';
-    $mailer->Port = 465;
+    $mailer->Port = 465; //SMTP Port
 
     //Recipients
     $mailer->setFrom( $email, "$name" );
-    $mailer->addAddress('no-reply@c1591626.ferozo.com','Sitio web');
+    $mailer->addAddress('no-reply@c1591626.ferozo.com','Sitio web'); //Recipient email
 
     //Content
     $mailer->isHTML(true);
-    //$mailer->msgHTML($body);
     $mailer->Subject = $subject;
     $mailer->msgHTML($body);
     $mailer->AltBody = strip_tags($body);
