@@ -269,7 +269,7 @@
 
 //STRATEGIC SECTORS
 #strategic-sectors {
-    background-image: url('../../assets/images/finance.jpg');
+    background-image: url('../../assets/images/finanzas.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -277,16 +277,16 @@
     position: relative;
     min-height: 300px;
     &.finance {
-        background-image: url('../../assets/images/finance.jpg');
+        background-image: url('../../assets/images/finanzas.jpg');
     }
     &.real-state {
         background-image: url('../../assets/images/real_state.jpg');
     }
     &.agrobusiness {
-        background-image: url('../../assets/images/agrobusiness.jpg');
+        background-image: url('../../assets/images/agronegocios.jpg');
     }
     &.energy {
-        background-image: url('../../assets/images/energy.jpg');
+        background-image: url('../../assets/images/energia.jpg');
     }
     &:after {
         content: '';

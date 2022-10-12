@@ -12199,6 +12199,11 @@ footer .copy {
 .banner-video {
   position: relative;
   padding: 0.75rem 0 1rem;
+  /* video {
+      @include media-breakpoint-down(lg) {
+          height: 280px;
+      }
+  } */
 }
 @media (min-width: 992px) {
   .banner-video {
@@ -12229,11 +12234,6 @@ footer .copy {
 @media (min-width: 992px) {
   .banner-video .content {
     margin-left: 0.85rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .banner-video iframe {
-    height: 280px;
   }
 }
 
@@ -12399,7 +12399,7 @@ footer .copy {
 }
 
 #strategic-sectors {
-  background-image: url("../../assets/images/finance.jpg");
+  background-image: url("../../assets/images/finanzas.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -12408,16 +12408,16 @@ footer .copy {
   min-height: 300px;
 }
 #strategic-sectors.finance {
-  background-image: url("../../assets/images/finance.jpg");
+  background-image: url("../../assets/images/finanzas.jpg");
 }
 #strategic-sectors.real-state {
   background-image: url("../../assets/images/real_state.jpg");
 }
 #strategic-sectors.agrobusiness {
-  background-image: url("../../assets/images/agrobusiness.jpg");
+  background-image: url("../../assets/images/agronegocios.jpg");
 }
 #strategic-sectors.energy {
-  background-image: url("../../assets/images/energy.jpg");
+  background-image: url("../../assets/images/energia.jpg");
 }
 #strategic-sectors:after {
   content: "";
