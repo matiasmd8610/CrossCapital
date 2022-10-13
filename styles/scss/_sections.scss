@@ -276,17 +276,45 @@
     color: #fff;
     position: relative;
     min-height: 300px;
-    &.finance {
+    &.finances {
         background-image: url('../../assets/images/finanzas.jpg');
+        .subtitle {
+            display: none;
+            &#text-finances {
+                display: block !important;
+            }
+
+        }
     }
     &.real-state {
         background-image: url('../../assets/images/real_state.jpg');
+        .subtitle {
+            display: none;
+            &#text-real-state {
+                display: block !important;
+            }
+
+        }
     }
     &.agrobusiness {
         background-image: url('../../assets/images/agronegocios.jpg');
+        .subtitle {
+            display: none;
+            &#text-agrobusiness {
+                display: block !important;
+            }
+
+        }
     }
     &.energy {
         background-image: url('../../assets/images/energia.jpg');
+        .subtitle {
+            display: none;
+            &#text-energy {
+                display: block !important;
+            }
+
+        }
     }
     &:after {
         content: '';
@@ -342,6 +370,9 @@
                     transform: translateY(2px);
                 }
             }
+        }
+        .subtitle {
+            display: none;
         }
     }
 }

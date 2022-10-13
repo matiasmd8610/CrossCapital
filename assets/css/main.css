@@ -12407,17 +12407,41 @@ footer .copy {
   position: relative;
   min-height: 300px;
 }
-#strategic-sectors.finance {
+#strategic-sectors.finances {
   background-image: url("../../assets/images/finanzas.jpg");
+}
+#strategic-sectors.finances .subtitle {
+  display: none;
+}
+#strategic-sectors.finances .subtitle#text-finances {
+  display: block !important;
 }
 #strategic-sectors.real-state {
   background-image: url("../../assets/images/real_state.jpg");
 }
+#strategic-sectors.real-state .subtitle {
+  display: none;
+}
+#strategic-sectors.real-state .subtitle#text-real-state {
+  display: block !important;
+}
 #strategic-sectors.agrobusiness {
   background-image: url("../../assets/images/agronegocios.jpg");
 }
+#strategic-sectors.agrobusiness .subtitle {
+  display: none;
+}
+#strategic-sectors.agrobusiness .subtitle#text-agrobusiness {
+  display: block !important;
+}
 #strategic-sectors.energy {
   background-image: url("../../assets/images/energia.jpg");
+}
+#strategic-sectors.energy .subtitle {
+  display: none;
+}
+#strategic-sectors.energy .subtitle#text-energy {
+  display: block !important;
 }
 #strategic-sectors:after {
   content: "";
@@ -12479,6 +12503,9 @@ footer .copy {
   margin-left: 0.5rem;
   font-size: 1rem;
   transform: translateY(2px);
+}
+#strategic-sectors .text-content .subtitle {
+  display: none;
 }
 
 .impact-investments {
