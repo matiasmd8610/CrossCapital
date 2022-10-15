@@ -1,6 +1,6 @@
 footer {
   background-color: $color-blue-secondary;
-  padding: 1.75rem 0 0;
+  padding: 1.85rem 0 0;
   margin-top: 2rem;
 
   .logo-footer {
@@ -48,11 +48,15 @@ footer {
         a {
           color: #fff;
           text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
         i {
           margin-right: 0.5rem;
           font-size: 1rem;
+          transform: translateY(-2px);
         }
 
         &.socials {
@@ -72,10 +76,14 @@ footer {
             width: 32px;
             height: 32px;
             display: flex;
+            &:hover {
+              text-decoration: none;
+            }
           }
 
           i {
             font-size: 0.75rem;
+            transform: none;
           }
         }
       }

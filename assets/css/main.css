@@ -11991,7 +11991,7 @@ header .navbar .navbar-collapse .language-selector li a:hover {
 
 footer {
   background-color: #153f59;
-  padding: 1.75rem 0 0;
+  padding: 1.85rem 0 0;
   margin-top: 2rem;
 }
 footer .logo-footer {
@@ -12041,9 +12041,13 @@ footer .footer-bottom .footer-nav-info .footer-info a {
   color: #fff;
   text-decoration: none;
 }
+footer .footer-bottom .footer-nav-info .footer-info a:hover {
+  text-decoration: underline;
+}
 footer .footer-bottom .footer-nav-info .footer-info i {
   margin-right: 0.5rem;
   font-size: 1rem;
+  transform: translateY(-2px);
 }
 footer .footer-bottom .footer-nav-info .footer-info.socials {
   padding: 0;
@@ -12066,8 +12070,12 @@ footer .footer-bottom .footer-nav-info .footer-info.socials a {
   height: 32px;
   display: flex;
 }
+footer .footer-bottom .footer-nav-info .footer-info.socials a:hover {
+  text-decoration: none;
+}
 footer .footer-bottom .footer-nav-info .footer-info.socials i {
   font-size: 0.75rem;
+  transform: none;
 }
 footer .footer-nav .nav-item {
   padding: 0.15rem 0;
@@ -12598,7 +12606,7 @@ footer .copy {
   text-align: center;
 }
 .our-experts .experts-wrapper .expert-card--name {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   margin-bottom: 0.25rem;
   font-weight: 700;
 }

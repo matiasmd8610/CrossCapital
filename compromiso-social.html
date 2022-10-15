@@ -78,14 +78,14 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 d-flex">
-            <div class="hero-text">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
               <h1>Compromiso con la comunidad</h1>
               <p>Trabajamos en pos de la equidad de oportunidades, la inclusión, la salud y la dignidad en cada una de
                 las comunidades donde nos integramos.</p>
             </div>
           </div>
           <div class="col-lg-6">
-            <figure class="hero-image">
+            <figure class="hero-image" data-aos="fade-left" data-aos-duration="500">
               <img src="./assets/images/corporate_citizenship.jpg" alt="">
             </figure>
           </div>
@@ -183,7 +183,7 @@
             </li>
 
             <li class="footer-info socials">
-              <a href="https://www.linkedin.com/company/cross-capital-international/"> <i
+              <a href="https://www.linkedin.com/company/cross-capital-international/" title="Linkedin"><i
                   class="fa-brands fa-linkedin-in m-0"></i></a>
             </li>
           </ul>
@@ -204,6 +204,7 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./assets/scripts/scripts.js"></script>
   <script>
     //Swiper Home
@@ -236,23 +237,6 @@
         },
       }
     });
-
-    //Barba Plugin
-    /* barba.init({
-        transitions: [{
-            name: 'opacity-transition',
-            leave(data) {
-                return gsap.to(data.current.container, {
-                    opacity: 0
-                });
-            },
-            enter(data) {
-                return gsap.from(data.next.container, {
-                    opacity: 0
-                });
-            }
-        }]
-    }); */
   </script>
 
 
