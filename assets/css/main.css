@@ -11691,6 +11691,7 @@ a:hover {
   margin-top: auto;
   align-items: flex-start;
   box-shadow: 0 0 8px #ccc;
+  width: 100%;
 }
 @media (min-width: 992px) {
   .hero-text {
@@ -12026,7 +12027,7 @@ footer .footer-bottom .footer-nav-info {
   }
 }
 footer .footer-bottom .footer-nav-info .footer-info {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   padding-right: 50px;
   display: flex;
   align-items: self-start;
@@ -12207,11 +12208,6 @@ footer .copy {
 .banner-video {
   position: relative;
   padding: 0.75rem 0 1rem;
-  /* video {
-      @include media-breakpoint-down(lg) {
-          height: 280px;
-      }
-  } */
 }
 @media (min-width: 992px) {
   .banner-video {
@@ -12242,6 +12238,12 @@ footer .copy {
 @media (min-width: 992px) {
   .banner-video .content {
     margin-left: 0.85rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .banner-video video {
+    height: 230px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -12372,7 +12374,7 @@ footer .copy {
 
 @media (max-width: 991.98px) {
   .two-cols {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 }
 .two-cols .text-content {
@@ -12544,6 +12546,15 @@ footer .copy {
   padding: 1.25rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 8px #ddd;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form form .btn {
+  align-self: center;
+  min-width: 300px;
+}
+.contact-form form .g-recaptcha > div {
+  margin: 0 auto;
 }
 .contact-form form label {
   font-size: 0.75rem;

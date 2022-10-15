@@ -188,6 +188,7 @@ a {
         margin-top: auto;
         align-items: flex-start;
         box-shadow: 0 0 8px #ccc;
+        width: 100%;
         @include media-breakpoint-up(lg) {
             min-height: 300px;
             box-shadow: none;

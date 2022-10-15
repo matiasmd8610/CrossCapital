@@ -100,11 +100,12 @@
             margin-left: .85rem;
         }
     }
-    /* video {
+    video {
         @include media-breakpoint-down(lg) {
-            height: 280px;
+            height: 230px;
+            margin-bottom: 1rem;
         }
-    } */
+    }
 }
 
 //OUR COMPANIES
@@ -234,7 +235,7 @@
 //TWO COLS
 .two-cols {
     @include media-breakpoint-down(lg) {
-        margin-top: 1rem;
+        margin-top: .5rem;
     }
     .text-content {
         display: flex;
@@ -407,6 +408,19 @@
         padding: 1.25rem;
         border-radius: .5rem;
         box-shadow: 0 0 8px #ddd;
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            align-self: center;
+            min-width: 300px;
+        }
+
+        .g-recaptcha {
+            &>div {
+                margin: 0 auto;
+            }
+        }
     
         label {
             font-size: 0.75rem;
