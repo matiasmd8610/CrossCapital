@@ -144,7 +144,7 @@ header {
             }
             .navbar-nav {
                 @include media-breakpoint-down(xl) {
-                    padding: 1.25rem 0 0;
+                    padding: 1.5rem 0 0;
                 }
                 .nav-item {
                     border-right: 1px solid $color-main;
