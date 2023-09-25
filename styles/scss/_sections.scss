@@ -1,4 +1,5 @@
-//MAIN SLIDER
+/*MAIN SLIDER
+******************************************/
 .main-slider {
     .home-swiper {
         .swiper-slide {
@@ -71,7 +72,8 @@
     }
 }
 
-//BANNER VIDEO
+/*BANNER VIDEO
+*******************************************/
 .banner-video {
     position: relative;
     padding: .75rem 0 1rem;
@@ -108,7 +110,8 @@
     }
 }
 
-//OUR COMPANIES
+/*OUR COMPANIES
+**********************************************/
 .our-companies {
     .companies-swiper {
         padding: .5rem;
@@ -127,6 +130,17 @@
             @include media-breakpoint-up(lg) {
                 min-height: 410px;
             }
+            &.shadow-none {
+                min-height: auto;
+                padding-bottom: 0;
+                figure {
+                    img {
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
             a {
                 text-decoration: none;
                 display: block;
@@ -139,11 +153,6 @@
                     background-color: $color-blue-third;
                     border: 0;
                 }
-                &:hover {
-                    /* img {
-                        transform: rotate(360deg);
-                    } */
-                }
             }
             figure {
                 width: 100%;
@@ -155,11 +164,9 @@
                     width: 100%;
                     height: 100%;
                     &.logo-patagonia-energy {
-                        //transform: translateY(-15px);
                         max-height: 160px;
                     }
                     &:hover {
-                        //transform: translateY(-15px);
                         opacity: 0.5;
                     }
                 }
@@ -172,7 +179,8 @@
     }
 }
 
-//INVESTMENT CRITERIA
+/*INVESTMENT CRITERIA
+*****************************************/
 .investment-criteria {
     background: rgb(85,121,150);
     background: linear-gradient(360deg, #94b8d7 45%, #d3e2ef 100%);
@@ -193,7 +201,6 @@
             border: 3px solid $color-blue-third;
             border-radius: 10px;
             background-color: #fff;
-            //box-shadow: 0 0 5px #eee;
             padding: 1.5rem 1.25rem 0.75rem;
             display: flex;
             flex-direction: column; 
@@ -207,7 +214,8 @@
     }
 }
 
-//FUTURE INVESTMENT
+/*FUTURE INVESTMENT
+*******************************************/
 .future-investment.two-cols {
     @include media-breakpoint-up(lg) {
         margin-top: 4rem;
@@ -220,7 +228,8 @@
     }
 }
 
-//KNOW MORE
+/*KNOW MORE
+************************************************/
 .know-more {
     @include media-breakpoint-down(lg) {
         margin-top: 0;
@@ -232,7 +241,8 @@
     }
 }
 
-//TWO COLS
+/*TWO COLS
+*********************************************/
 .two-cols {
     @include media-breakpoint-down(lg) {
         margin-top: .5rem;
@@ -256,7 +266,8 @@
     }
 }
 
-//TWO COLS TEXT
+/*TWO COLS TEXT
+**********************************************/
 .two-cols-text {
     &--wrapper {
         margin-top: 2rem;
@@ -268,7 +279,8 @@
     }
 }
 
-//STRATEGIC SECTORS
+/*STRATEGIC SECTORS
+******************************************************/
 #strategic-sectors {
     background-image: url('../../assets/images/finanzas.jpg');
     background-size: cover;
@@ -378,7 +390,8 @@
     }
 }
 
-//IMPACT INVESTMENTS 
+/*IMPACT INVESTMENTS 
+*************************************/
 .impact-investments {
     background-color: $color-blue-third;
     .text-content {
@@ -388,7 +401,8 @@
     }
 }
 
-//CORPORATE-CITIZENSHIP 
+/*CORPORATE-CITIZENSHIP 
+*********************************************/
 .corporate-citizenship {
     background-color: #fff;
     .text-content {
@@ -398,7 +412,8 @@
     }
 }
 
-//CONTACT
+/*CONTACT
+*********************************************/
 .contact-form {
     margin-top: 0;
     form {
@@ -452,7 +467,8 @@
     }
 }
 
-//OUR EXPERTS
+/*OUR EXPERTS
+******************************************/
 .our-experts {
     .experts-wrapper {
         display: grid;
@@ -496,7 +512,8 @@
 
 }
 
-//THANK YOU
+/*THANK YOU
+*********************************************/
 .thank-you {
     margin-top: 6rem;
     h1, h2, .back-to-home {

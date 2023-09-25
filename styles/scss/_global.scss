@@ -240,10 +240,3 @@ a {
     }
 }
 
-.intro {
-    font-size: 1.15rem;
-    @include media-breakpoint-up(lg) {
-        font-size: 1.35rem;
-    }
-}
-
